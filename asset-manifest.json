@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ce58c56.css",
-    "main.js": "/static/js/main.d8912b7c.js",
-    "index.html": "/index.html",
-    "main.5ce58c56.css.map": "/static/css/main.5ce58c56.css.map",
-    "main.d8912b7c.js.map": "/static/js/main.d8912b7c.js.map"
+    "main.css": "/abyss-tt-grab-tree/static/css/main.5ce58c56.css",
+    "main.js": "/abyss-tt-grab-tree/static/js/main.d8912b7c.js",
+    "index.html": "/abyss-tt-grab-tree/index.html",
+    "main.5ce58c56.css.map": "/abyss-tt-grab-tree/static/css/main.5ce58c56.css.map",
+    "main.d8912b7c.js.map": "/abyss-tt-grab-tree/static/js/main.d8912b7c.js.map"
   },
   "entrypoints": [
     "static/css/main.5ce58c56.css",
