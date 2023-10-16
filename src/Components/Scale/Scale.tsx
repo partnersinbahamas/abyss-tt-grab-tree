@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { SquareButton } from "../Buttons/SquareButton/SquareButton";
 import * as zoomActions from '../../Redux/features/zoom/zoom';
 import { useAppDispatch, useAppSelector } from "../../Redux/hooks";
@@ -16,18 +16,18 @@ export const Scale = () => {
     25, 30, 40, 50, 60, 70, 80, 90, 100, 125, 150,
   ];
 
-  const onIncrease = () => {
+  const onIncrease = useCallback(() => {
     dispatch(zoomActions.increase(AMOUNT));
-  };
+  }, []);
 
-  const onDecrease = () => {
+  const onDecrease = useCallback(() => {
     dispatch(zoomActions.decrease(AMOUNT));
-  };
+  }, []);
 
-  const onSet = (amount: number) => {
+  const onSet = useCallback((amount: number) => {
     dispatch(zoomActions.set(amount))
     setIsOpen(false);
-  }
+  }, [])
 
   return (
     <div className="scale">
