@@ -1,26 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Header } from './Components/Header/Header';
+import { Wall } from './Components/Wall/Wall';
+import './App.scss';
+import { useState } from 'react';
 
-function App() {
+const App = () => {
+  const [isNavigated, setIsNavigated] = useState<boolean>(false);
+
+  const isNavigatedHandler = () => {
+    setIsNavigated(true);
+
+    setTimeout(() => {
+      setIsNavigated(false);
+    }, 700);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <section className="app">
+      <Header onNavigate={isNavigatedHandler} />
+
+      <div className="app__container" onClick={(event) => event.stopPropagation()}>
+          <Wall isNavigated={isNavigated} isNavigatedHandler={isNavigatedHandler}/>
+      </div>
+    </section>
+  )
 }
 
 export default App;

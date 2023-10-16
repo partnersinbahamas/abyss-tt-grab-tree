@@ -1,0 +1,73 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+.scale {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  position: relative;
+  height: 25px;
+
+  @include tablet() {
+    height: 30px;
+  }
+
+  @include desktop() {
+    height: 40px;
+  }
+
+  &__list {
+    position: absolute;
+    transition: $styles-transition;
+    top: 10px;
+    left: -15px;
+    z-index: 1;
+
+    @include tablet() {
+      top: 15px;
+      left: -10px;
+    }
+    
+    @include desktop() {
+      top: 25px;
+      left: 0;
+    }
+  }
+
+  &__count {
+    background-color: #fff;
+    height: 100%;
+    padding: 0 10px;
+    color: $color-grey--light;
+    font-size: 8px;
+    cursor: pointer;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+
+    @include tablet() {
+      padding: 0 25px;
+      font-size: 12px;
+    }
+
+    @include desktop() {
+      min-width: 40px;
+    }
+
+    &_item {
+      padding: 5px 10px;
+
+
+      @include tablet() {
+        padding: 5px 25px;
+      }
+
+      &:hover {
+        background-color: #eee;
+      }
+    }
+  }
+};

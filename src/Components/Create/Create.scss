@@ -1,0 +1,42 @@
+@import '../../styles/mixins.scss';
+
+.create {
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 15px;
+
+  @include tablet() {
+    padding: 15px 30px;
+  }
+
+  @include desktop() {
+    padding: 20px 40px;
+  }
+
+  &__title {
+    font-size: 10px;
+    font-weight: 500;
+
+    @include tablet() {
+      font-size: 12px;
+    }
+
+    @include desktop() {
+      font-size: 14px;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+
+    @include desktop() {
+      margin-top: 15px;
+    }
+  }
+};

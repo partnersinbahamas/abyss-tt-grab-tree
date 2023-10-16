@@ -1,0 +1,28 @@
+@import '../../styles/mixins.scss';
+
+.counter {
+  background-color: orange;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 8px;
+
+  width: 7px;
+  height: 7px;
+  padding: 2px;
+
+  @include desktop() {
+    width: 10px;
+    height: 10px;
+    font-size: 10px;
+  }
+
+  @include desktop() {
+    width: 13px;
+    height: 13px;
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+};
+

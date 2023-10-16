@@ -1,0 +1,31 @@
+@import './styles/variables.scss';
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-color: $bgc-color;
+}
+
+* {
+  font-family: $font;
+  color: $color-grey--dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  &__container {
+    width: 100%;
+    margin: 0;
+    position: relative;
+  }
+}
+  

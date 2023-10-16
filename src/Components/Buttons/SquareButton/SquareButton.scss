@@ -1,0 +1,43 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.squareButton {
+  border: 0px;
+  background-color: #fff;
+  transition: $styles-transition;
+  cursor: pointer;
+  height: 100%;
+  width: 25px;
+  height: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include tablet() {
+    width: 30px;
+    height: 30px;
+  }
+
+  @include desktop() {
+    width: 40px;
+    height: 40px;
+  }
+    
+  &__title {
+    font-size: 16px;
+    color: $color-grey--light;
+
+    @include tablet() {
+      font-size: 18px;
+    }
+
+    @include desktop() {
+      font-size: 20px;
+    }
+  }
+    
+  &:hover {
+    background-color: #eee;
+  }
+};

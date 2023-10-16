@@ -1,0 +1,38 @@
+@import '../../../../styles/variables.scss';
+@import '../../../../styles/mixins.scss';
+
+.arrowButton {
+  border: 0px;
+  padding: 2px 20px;
+  background-color: $color-grey--arr-btn;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: $styles-transition;
+
+  @include tablet() {
+    padding: 2px 28px;
+  }
+
+  @include desktop() {
+    padding: 5px 35px;
+  }
+
+  &:hover {
+    background-color: $color-grey--light;
+  }
+
+  >i {
+    font-size: 18px;
+    color: #fff;
+
+    @include tablet() {
+      font-size: 24px;
+    }
+
+    @include desktop() {
+      font-size: 28px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.purpleButton {
+  background-color: $color-blue;
+  border: 0px;
+  color: #fff;
+  font-weight: 500;
+  width: max-content;
+  padding: 5px 10px;
+
+  font-size: 8px;
+  transition: $styles-transition;
+
+  @include tablet() {
+    padding: 8px 13px;
+    font-size: 10px;
+  }
+
+  @include desktop {
+    padding: 10px 15px;
+    font-size: 12px;
+  }
+
+  &:hover {
+    background-color: $color-blue-hover;
+  }
+};
+

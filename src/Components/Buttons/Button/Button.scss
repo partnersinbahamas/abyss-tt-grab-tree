@@ -1,0 +1,27 @@
+@import '../../../styles/variables.scss';
+@import '../../../styles/mixins.scss';
+
+.button {
+  border: 0;
+  padding: 2px 8px;
+  background-color: $color-grey;
+  transition: $styles-transition;
+
+  @include desktop() {
+    padding: 5px 15px;
+  }
+
+  &:hover {
+    background-color: #eee;
+  }
+
+  &__title {
+    color: $color-grey--light;
+    font-size: 10px;
+    font-weight: 600;
+
+    @include desktop() {
+      font-size: 12px;
+    }
+  }
+};

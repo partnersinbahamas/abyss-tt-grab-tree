@@ -1,0 +1,102 @@
+@import '../../../styles/mixins.scss';
+
+.treeItem {
+  transition: .5s;
+
+  &__element {
+    border: 1px solid transparent;
+    padding: 2px 5px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 10px;
+    position: relative;
+    z-index: 1;
+
+    display: inline;  
+    border-radius: 1px;
+
+    @include tablet() {
+      padding: 4px 8px;
+      font-size: 12px;
+    }
+
+    @include desktop() {
+      padding: 5px 10px;
+    }
+  }
+
+  &__input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    &_type {
+      border: 1px solid #ddd;
+      background-color: #fff;
+      text-align: center;
+      margin: 0;
+      max-width: 90px;
+      outline: none;
+
+      &::placeholder {
+        font-size: 10px;
+
+        @include tablet() {
+          font-size: 12px;
+        }
+
+        @include desktop() {
+          font-size: 13px;
+          padding: 2px;
+        }
+      }
+
+      @include tablet() {
+        max-width: 100px;
+      }
+
+      @include desktop() {
+        max-width: 120px;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    position: relative;
+    left: 23px;
+
+    @include tablet() {
+      left: 25px;
+    }
+
+    @include desktop() {
+      left: 30px;
+    }
+  }
+
+  &_buttons {
+    display: flex;
+    gap: 2px;
+
+    @include desktop() {
+      gap: 5px;
+    }
+  }
+
+  &__create {
+    position: absolute;
+    top: 50px;
+    z-index: 3;
+  }
+
+  &__cross {
+    transform: rotate(45deg);
+  }
+};
